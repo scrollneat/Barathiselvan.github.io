@@ -16,13 +16,13 @@ print(placeholder)
 
 game_over = False
 lives = 6
-# loop_lives = lives -1
 list_correct = []
 while not game_over:
     
     guess = input("Guess a letter otherwise you will be hanged: ").lower()
-    if guess in chosen_word:
+    if guess in list_correct:
         print(f"\nYou have already guessed {guess}\n")
+        
     display = ""
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
@@ -32,27 +32,19 @@ while not game_over:
              display += chosen_word[i]
         else:
             display += "_"
+            
     print(display)
     
-    
-    if guess not in chosen_word:
+    if guess not in chosen_word :
         lives -= 1
-        print(f"\nYou have guessed {guess}, that's not in the word.\nYou lose a Life")
+        print(f"\nYou have guessed {guess}, that's not in the word.\nYou lose a Life\n")
         if lives == 0:
-            print(f"\n***************************It was {chosen_word}You lost and You have been hanged***************************")
+            print(f"\n***************************It was {chosen_word}. You lost and You have been hanged***************************")
             game_over = True
     if "_" not in display:
         print("\n***************************You won the game***************************")
         game_over = True
-    print(f"Lives left {lives}")
+    print(f"\nLives left {lives}")
     print(ascii_art.HANGMANPICS[lives])
 
-
-for i in chosen_word:
-  for j in range(len(guess)):
-        if i == guess[j]:
-            print("Right")
-            break
-        else:
-            print("Wrong")
         
