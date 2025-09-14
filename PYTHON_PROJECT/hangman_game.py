@@ -1,74 +1,9 @@
 import random
 import word_list
-HANGMANPICS = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
-
-logo = ''' 
- _                                             
-| |                                            
-| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
-| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-| | | | (_| | | | | (_| | | | | | | (_| | | | |
-|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                    __/ |                      
-                   |___/    '''
+import ascii_art
 
 
-print(logo)
+print(ascii_art.logo)
 chosen_word = random.choice(word_list.list_of_words)
 print(chosen_word)
 
@@ -78,11 +13,11 @@ for i in range(len(chosen_word)):
 print(placeholder)
 
 
-game_over = False
+game_over = True
 lives = 6
 # loop_lives = lives -1
 list_correct = []
-while not game_over:
+while game_over:
     display = ""
     guess = input("Guess a letter otherwise you will be hanged: ").lower()
     for i in range(len(chosen_word)):
@@ -99,11 +34,12 @@ while not game_over:
         lives -= 1
         if lives == 0:
             print('***************************You lost and You have been hanged***************************')
+            game_over = False
     if "_" not in display:
         print("***************************You won the game***************************")
-        game_over = True
+        game_over = False
     print(f"Lives left {lives}")
-    print(HANGMANPICS[lives])
+    print(ascii_art.HANGMANPICS[lives])
 
 
 for i in chosen_word:
