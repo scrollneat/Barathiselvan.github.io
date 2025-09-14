@@ -1,5 +1,6 @@
 import random
 import word_list
+# from word_list import list_of_words
 import ascii_art
 
 
@@ -13,13 +14,16 @@ for i in range(len(chosen_word)):
 print(placeholder)
 
 
-game_over = True
+game_over = False
 lives = 6
 # loop_lives = lives -1
 list_correct = []
-while game_over:
-    display = ""
+while not game_over:
+    
     guess = input("Guess a letter otherwise you will be hanged: ").lower()
+    if guess in chosen_word:
+        print(f"\nYou have already guessed {guess}\n")
+    display = ""
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             display += chosen_word[i]
@@ -30,14 +34,16 @@ while game_over:
             display += "_"
     print(display)
     
+    
     if guess not in chosen_word:
         lives -= 1
+        print(f"\nYou have guessed {guess}, that's not in the word.\nYou lose a Life")
         if lives == 0:
-            print('***************************You lost and You have been hanged***************************')
-            game_over = False
+            print(f"\n***************************It was {chosen_word}You lost and You have been hanged***************************")
+            game_over = True
     if "_" not in display:
-        print("***************************You won the game***************************")
-        game_over = False
+        print("\n***************************You won the game***************************")
+        game_over = True
     print(f"Lives left {lives}")
     print(ascii_art.HANGMANPICS[lives])
 
