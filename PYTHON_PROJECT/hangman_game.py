@@ -1,7 +1,75 @@
 import random
-word_list = ["python", "java", "kotlin", "javascript"]
+import word_list
+HANGMANPICS = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
-chosen_word = random.choice(word_list)
+logo = ''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
+
+
+print(logo)
+chosen_word = random.choice(word_list.list_of_words)
 print(chosen_word)
 
 placeholder = ""
@@ -11,6 +79,8 @@ print(placeholder)
 
 
 game_over = False
+lives = 6
+# loop_lives = lives -1
 list_correct = []
 while not game_over:
     display = ""
@@ -24,9 +94,17 @@ while not game_over:
         else:
             display += "_"
     print(display)
+    
+    if guess not in chosen_word:
+        lives -= 1
+        if lives == 0:
+            print('***************************You lost and You have been hanged***************************')
     if "_" not in display:
-        print("You won the game")
+        print("***************************You won the game***************************")
         game_over = True
+    print(f"Lives left {lives}")
+    print(HANGMANPICS[lives])
+
 
 for i in chosen_word:
   for j in range(len(guess)):
