@@ -6,7 +6,7 @@ import ascii_art
 
 print(ascii_art.logo)
 chosen_word = random.choice(word_list.list_of_words)
-print(chosen_word)
+# print(chosen_word)
 
 placeholder = ""
 for i in range(len(chosen_word)):
