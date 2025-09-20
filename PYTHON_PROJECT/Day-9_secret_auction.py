@@ -32,4 +32,6 @@ while not stop:
         highest_bidder(bidders)
 
 
+
+
     
