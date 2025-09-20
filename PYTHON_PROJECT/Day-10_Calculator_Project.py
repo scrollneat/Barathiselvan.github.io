@@ -36,4 +36,3 @@ while keep_running:
         else: 
             go_ahead = False
             print("\n"*1000)
-            number1 = 0
