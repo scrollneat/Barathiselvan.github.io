@@ -11,3 +11,14 @@ def comp_num_generator():
     return random.choice(list_of_num)
 
 computer_num = comp_num_generator()
+
+user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+if user_reponse == 'easy':
+    attempts = 10
+    print(f"You have {attempts} attempts remaining to guess the number.")
+    guess_number = input("Make a guess: ")
+    if guess_number == computer_num:
+        print(f"You got it! The answer was {computer_num}.")
+    else:
+        while guess_number != computer_num and attempts == 0:
+            
