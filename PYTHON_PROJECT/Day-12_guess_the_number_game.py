@@ -10,19 +10,15 @@ def comp_num_generator():
         list_of_num.append(i)
     return random.choice(list_of_num)
 
-computer_num = comp_num_generator()
+computer_number = comp_num_generator()
 
 def low_high(u_num, com_num):
     if u_num > com_num:
         return 1
     else:
         return 0
-    
-user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
-if user_reponse == 'easy':
-    attempts = 10
-    print(f"You have {attempts} attempts remaining to guess the number.")
-    guess_number = input("Make a guess: ")
+
+def game_funciton(attempts, guess_number, computer_num):
     if guess_number == computer_num:
         print(f"You got it! The answer was {computer_num}.")
     else:
@@ -34,3 +30,19 @@ if user_reponse == 'easy':
             else:
                 attempts -= 1
                 print(f"Too low.\nGuess again.\nYou have {attempts} attempts remaining to guess the number.\n")
+        if guess_number == computer_num:
+            print(f"You got it! The answer was {computer_num}.")
+
+    
+user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
+if user_reponse == 'easy':
+    lives = 10
+    print(f"You have {lives} attempts remaining to guess the number.")
+    user_number = input("Make a guess: ")
+    game_funciton(lives, user_number, computer_number)
+
+elif user_reponse == 'hard':
+    lives = 5
+    print(f"You have {lives} attempts remaining to guess the number.")
+    user_number = input("Make a guess: ")
+    game_funciton(lives, user_number, computer_number)
