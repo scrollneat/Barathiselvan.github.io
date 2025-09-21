@@ -2,6 +2,9 @@ import ascii_art
 import random
     
 def deal_Card():
+    card_deck = [2,3,4,5,6,7,8,9,10,10,10,10,11]
+    random.shuffle(card_deck)
+    random.shuffle(card_deck)
     card = random.choice(card_deck)
     return card
 
@@ -14,17 +17,11 @@ def calculate_score(Cards):
         Cards.append(1)
     return sum(Cards)
 def draw():
-    print(f'''    Your Final Hand: {Your_Cards}, Final Score: {Your_score} 
-    Computer Final Hand: {Computer_Cards}, Final Score: {Computer_Score} 
-    It is a Draw''')
+    print(f'''It is a Draw''')
 def win():
-    print(f'''    Your Final Hand: {Your_Cards}, Final Score: {Your_score} 
-    Computer Final Hand: {Computer_Cards}, Final Score: {Computer_Score} 
-    You Win!''')   
+    print(f'''You Win!''')   
 def lose():
-    print(f'''    Your Final Hand: {Your_Cards}, Final Score: {Your_score} 
-    Computer Final Hand: {Computer_Cards}, Final Score: {Computer_Score} 
-    You Lose!''')
+    print(f'''You Lose!''')
 
 def compare(user_score, com_score):
     if user_score == com_score:
@@ -39,14 +36,9 @@ def compare(user_score, com_score):
         else:
             return lose()
         
-new_game = True
-while new_game:
+
+def new_game():
     print(ascii_art.black_jack_logo)
-
-    card_deck = [2,3,4,5,6,7,8,9,10,10,10,10,11]
-
-    random.shuffle(card_deck)
-    random.shuffle(card_deck)
 
 
     Your_Cards = []
@@ -82,13 +74,11 @@ while new_game:
         Computer_Cards.append(deal_Card())
         Computer_Score = calculate_score(Computer_Cards)
 
-
+    print(f'Your Final Hand:     {Your_Cards},     Final Score: {Your_score}')
+    print(f"Computer Final Hand: {Computer_Cards}, Final Score: {Computer_Score}")
     compare(Your_score, Computer_Score)
 
-    user2_response = input("If You want to restart the game: Type 'y', Type 'n' to quit: ").lower()
 
-    if user2_response == 'y':
-        new_game = True
-        print("\n"*1000)
-    else: 
-        new_game = False
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == 'y':
+    print("\n"*1000)
+    new_game()
