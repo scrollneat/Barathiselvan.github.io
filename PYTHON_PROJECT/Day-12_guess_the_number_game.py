@@ -38,7 +38,7 @@ user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 if user_reponse == 'easy':
     lives = 10
     print(f"You have {lives} attempts remaining to guess the number.")
-    user_number = input("Make a guess: ")
+    user_number = int(input("Make a guess: "))
     game_funciton(lives, user_number, computer_number)
 
 elif user_reponse == 'hard':
