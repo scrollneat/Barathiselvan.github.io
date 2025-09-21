@@ -12,6 +12,12 @@ def comp_num_generator():
 
 computer_num = comp_num_generator()
 
+def low_high(u_num, com_num):
+    if u_num > com_num:
+        return 1
+    else:
+        return 0
+    
 user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
 if user_reponse == 'easy':
     attempts = 10
@@ -20,5 +26,11 @@ if user_reponse == 'easy':
     if guess_number == computer_num:
         print(f"You got it! The answer was {computer_num}.")
     else:
-        while guess_number != computer_num and attempts == 0:
-            
+        while guess_number != computer_num and attempts != 0:
+            l_h_output = low_high(guess_number, computer_num)
+            if l_h_output == 1:
+                attempts -= 1
+                print(f"Too high.\nGuess again.\nYou have {attempts} attempts remaining to guess the number.\n")
+            else:
+                attempts -= 1
+                print(f"Too low.\nGuess again.\nYou have {attempts} attempts remaining to guess the number.\n")
