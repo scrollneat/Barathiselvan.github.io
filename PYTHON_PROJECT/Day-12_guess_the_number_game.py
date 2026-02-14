@@ -36,7 +36,7 @@ def game_funciton(lives):
                     lives -= 1
                     print(f"Too low.\nGuess again.\n")
         else:
-            print(f"You lost better luck next time!\n")
+            print(f"Oops! You ran out of guesses.\nYou lost better luck next time!\n")
             game_over = False
 
 def mode_select():
