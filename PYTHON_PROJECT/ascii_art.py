@@ -151,3 +151,51 @@ guess_game_logo = '''
                                                                   ▒▒██████                                                    
                                                                    ▒▒▒▒▒▒                                                     
 '''
+
+higher_lower_logo = '''
+                                                                                                                                
+                                                                                                                                
+HHHHHHHHH     HHHHHHHHHIIIIIIIIII      GGGGGGGGGGGGGHHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR              
+H:::::::H     H:::::::HI::::::::I   GGG::::::::::::GH:::::::H     H:::::::HE::::::::::::::::::::ER::::::::::::::::R             
+H:::::::H     H:::::::HI::::::::I GG:::::::::::::::GH:::::::H     H:::::::HE::::::::::::::::::::ER::::::RRRRRR:::::R            
+HH::::::H     H::::::HHII::::::IIG:::::GGGGGGGG::::GHH::::::H     H::::::HHEE::::::EEEEEEEEE::::ERR:::::R     R:::::R           
+  H:::::H     H:::::H    I::::I G:::::G       GGGGGG  H:::::H     H:::::H    E:::::E       EEEEEE  R::::R     R:::::R           
+  H:::::H     H:::::H    I::::IG:::::G                H:::::H     H:::::H    E:::::E               R::::R     R:::::R           
+  H::::::HHHHH::::::H    I::::IG:::::G                H::::::HHHHH::::::H    E::::::EEEEEEEEEE     R::::RRRRRR:::::R            
+  H:::::::::::::::::H    I::::IG:::::G    GGGGGGGGGG  H:::::::::::::::::H    E:::::::::::::::E     R:::::::::::::RR             
+  H:::::::::::::::::H    I::::IG:::::G    G::::::::G  H:::::::::::::::::H    E:::::::::::::::E     R::::RRRRRR:::::R            
+  H::::::HHHHH::::::H    I::::IG:::::G    GGGGG::::G  H::::::HHHHH::::::H    E::::::EEEEEEEEEE     R::::R     R:::::R           
+  H:::::H     H:::::H    I::::IG:::::G        G::::G  H:::::H     H:::::H    E:::::E               R::::R     R:::::R           
+  H:::::H     H:::::H    I::::I G:::::G       G::::G  H:::::H     H:::::H    E:::::E       EEEEEE  R::::R     R:::::R           
+HH::::::H     H::::::HHII::::::IIG:::::GGGGGGGG::::GHH::::::H     H::::::HHEE::::::EEEEEEEE:::::ERR:::::R     R:::::R           
+H:::::::H     H:::::::HI::::::::I GG:::::::::::::::GH:::::::H     H:::::::HE::::::::::::::::::::ER::::::R     R:::::R           
+H:::::::H     H:::::::HI::::::::I   GGG::::::GGG:::GH:::::::H     H:::::::HE::::::::::::::::::::ER::::::R     R:::::R           
+HHHHHHHHH     HHHHHHHHHIIIIIIIIII      GGGGGG   GGGGHHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR           
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+LLLLLLLLLLL                  OOOOOOOOO     WWWWWWWW                           WWWWWWWWEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRR   
+L:::::::::L                OO:::::::::OO   W::::::W                           W::::::WE::::::::::::::::::::ER::::::::::::::::R  
+L:::::::::L              OO:::::::::::::OO W::::::W                           W::::::WE::::::::::::::::::::ER::::::RRRRRR:::::R 
+LL:::::::LL             O:::::::OOO:::::::OW::::::W                           W::::::WEE::::::EEEEEEEEE::::ERR:::::R     R:::::R
+  L:::::L               O::::::O   O::::::O W:::::W           WWWWW           W:::::W   E:::::E       EEEEEE  R::::R     R:::::R
+  L:::::L               O:::::O     O:::::O  W:::::W         W:::::W         W:::::W    E:::::E               R::::R     R:::::R
+  L:::::L               O:::::O     O:::::O   W:::::W       W:::::::W       W:::::W     E::::::EEEEEEEEEE     R::::RRRRRR:::::R 
+  L:::::L               O:::::O     O:::::O    W:::::W     W:::::::::W     W:::::W      E:::::::::::::::E     R:::::::::::::RR  
+  L:::::L               O:::::O     O:::::O     W:::::W   W:::::W:::::W   W:::::W       E:::::::::::::::E     R::::RRRRRR:::::R 
+  L:::::L               O:::::O     O:::::O      W:::::W W:::::W W:::::W W:::::W        E::::::EEEEEEEEEE     R::::R     R:::::R
+  L:::::L               O:::::O     O:::::O       W:::::W:::::W   W:::::W:::::W         E:::::E               R::::R     R:::::R
+  L:::::L         LLLLLLO::::::O   O::::::O        W:::::::::W     W:::::::::W          E:::::E       EEEEEE  R::::R     R:::::R
+LL:::::::LLLLLLLLL:::::LO:::::::OOO:::::::O         W:::::::W       W:::::::W         EE::::::EEEEEEEE:::::ERR:::::R     R:::::R
+L::::::::::::::::::::::L OO:::::::::::::OO           W:::::W         W:::::W          E::::::::::::::::::::ER::::::R     R:::::R
+L::::::::::::::::::::::L   OO:::::::::OO              W:::W           W:::W           E::::::::::::::::::::ER::::::R     R:::::R
+LLLLLLLLLLLLLLLLLLLLLLLL     OOOOOOOOO                 WWW             WWW            EEEEEEEEEEEEEEEEEEEEEERRRRRRRR     RRRRRRR
+                                                                                                                                                                                                                                                          
+                                                                                                                                
+'''
