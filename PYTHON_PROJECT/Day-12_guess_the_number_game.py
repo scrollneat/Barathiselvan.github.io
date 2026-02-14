@@ -19,24 +19,25 @@ def low_high(u_num, com_num):
         return 0
 
 def game_funciton(lives):
-    while lives != 0:
-        print(f"You have {lives} attempts remaining to guess the number.")
-        user_number = int(input("Make a guess: "))
-        if user_number == computer_number:
-            print(f"You got it! The answer was {computer_number}.")
-        else:
-            while user_number != computer_number and lives != 0:
+    game_over = True
+    while game_over:
+        if lives >= 1:
+            print(f"You have {lives} attempts remaining to guess the number.")
+            user_number = int(input("Make a guess: "))
+            if user_number == computer_number  and lives != 0:
+                print(f"You got it! The answer was {computer_number}.")
+                game_over = False
+            elif (user_number != computer_number) and (lives >= 1):
                 l_h_output = low_high(user_number, computer_number)
                 if l_h_output == 1:
                     lives -= 1
-                    print(f"Too high.\nGuess again.\nYou have {lives} attempts remaining to guess the number.\n")
-                else:
+                    print(f"Too high.\nGuess again.\n")
+                elif l_h_output == 0:
                     lives -= 1
-                    print(f"Too low.\nGuess again.\nYou have {lives} attempts remaining to guess the number.\n")
-            if user_number == computer_number and lives != 0:
-                print(f"You got it! The answer was {computer_number}.")
-            else:
-                print(f"You lost better luck next time")
+                    print(f"Too low.\nGuess again.\n")
+        else:
+            print(f"You lost better luck next time!\n")
+            game_over = False
 
 def mode_select():
     user_reponse = input("Choose a difficulty. Type 'easy' or 'hard': ").lower()
@@ -51,6 +52,5 @@ def mode_select():
         mode_select()
 
 mode_select()
-
 
 
