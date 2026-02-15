@@ -1,38 +1,61 @@
-import ascii_art
-import game_data
-import random
-print(ascii_art.higher_lower_logo)
-#Function to generate 2 random data from the game_data list
-def generate_random_data():
-    """Return two distinct random indices into game_data.data."""
-    # random.sample gives two unique indices (no duplicates)
-    return random.sample(range(len(game_data.data)), 2)
+#display ascii art
+from ascii_art import higher_lower_logo, higher_lower_vs_logo
+from game_data import data
+from random import randint
 
-def comaparison_data(A,B):
-    print(f"Compare A: {game_data.data[rand_choice[A]]['name']}, a {game_data.data[rand_choice[0]]['description']} from {game_data.data[rand_choice[A]]['country']}")
-    print(ascii_art.higher_lower_vs_logo)
-    print(f"Compare B: {game_data.data[rand_choice[B]]['name']}, a {game_data.data[rand_choice[1]]['description']} from {game_data.data[rand_choice[B]]['country']}")
+#Generate the random account from the game data 
+def random_number():
+    return  randint(0, 57)
 
-def higher_follower_count():
-    if game_data.data[rand_choice[0]]['follower_count'] > game_data.data[rand_choice[1]]['follower_count']:
-        return  'A'
-    elif game_data.data[rand_choice[0]]['follower_count'] < game_data.data[rand_choice[1]]['follower_count']:
+#formatting the random account details
+def format_Sentence(account):
+    account_name = data[account]['name']
+    accoutn_description = data[account]['description']
+    account_country = data[account]['country']
+    return f"{account_name}, a {accoutn_description}, from {account_country}."
+
+def high_follower_count(a, b):
+    if data[a]['follower_count'] > data[b]['follower_count'] :
+        return 'A'
+    elif data[a]['follower_count'] < data[b]['follower_count'] :
         return 'B'
     else:
-        return 'C'
-
-rand_choice = generate_random_data()
-comaparison_data(0,1)
-print(higher_follower_count())
+        return False
+print(higher_lower_logo)   
+account_a = random_number()
+account_b = random_number()
+if account_a == account_b:
+    account_b = random_number()
+print(f"Compare A: {format_Sentence(account_a)}")
+print(higher_lower_vs_logo)
+print(f"Against B: {format_Sentence(account_b)}")
+#ask for user input
+print(high_follower_count(account_a, account_b))
 user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
+#calculate who has more followers count
 
-if user_input == higher_follower_count():
-    i =+ 1
-    print(f"You're right! Current score: {i}")
-    rand_choice = generate_random_data()
-    comaparison_data(1,rand_choice[0])
+score = 0
+game_over = True
+random_account = []
 
+while game_over:
+    if high_follower_count(account_a, account_b) == user_input:
+        score += 1
+        print(f"You're right! Current score: {score}")
+        account_b = account_a
+        print(f"Compare A: {format_Sentence(account_a)}")
+        print(higher_lower_vs_logo)
+        account_b = random_number()
+        if account_a == account_b:
+            account_b = random_number()
+        print(f"Against B: {format_Sentence(account_b)}")
+        print(high_follower_count(account_a, account_b))
+        user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
+    else:
+        print(f"Sorry, that's wrong. Final score: {score}")
+        game_over = False
+# Score keeping
 
+# make it repeatable
 
-    
-        
+# giving user feed back
