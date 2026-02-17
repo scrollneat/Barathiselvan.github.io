@@ -30,7 +30,6 @@ print(f"Compare A: {format_Sentence(account_a)}")
 print(higher_lower_vs_logo)
 print(f"Against B: {format_Sentence(account_b)}")
 #ask for user input
-print(high_follower_count(account_a, account_b))
 user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
 #calculate who has more followers count
 
@@ -42,20 +41,15 @@ while game_over:
     if high_follower_count(account_a, account_b) == user_input:
         score += 1
         print(f"You're right! Current score: {score}")
-        account_b = account_a
+        account_a = account_b
         print(f"Compare A: {format_Sentence(account_a)}")
         print(higher_lower_vs_logo)
         account_b = random_number()
         if account_a == account_b:
             account_b = random_number()
         print(f"Against B: {format_Sentence(account_b)}")
-        print(high_follower_count(account_a, account_b))
         user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
     else:
         print(f"Sorry, that's wrong. Final score: {score}")
         game_over = False
-# Score keeping
 
-# make it repeatable
-
-# giving user feed back
