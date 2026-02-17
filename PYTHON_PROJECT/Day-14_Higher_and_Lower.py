@@ -31,6 +31,8 @@ print(higher_lower_vs_logo)
 print(f"Against B: {format_Sentence(account_b)}")
 #ask for user input
 user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
+print('\n'*200)
+print(higher_lower_logo)
 #calculate who has more followers count
 
 score = 0
@@ -49,6 +51,8 @@ while game_over:
             account_b = random_number()
         print(f"Against B: {format_Sentence(account_b)}")
         user_input = input("Who has more followers? Type 'A' or 'B': ").upper()
+        print('\n'*200)
+        print(higher_lower_logo)
     else:
         print(f"Sorry, that's wrong. Final score: {score}")
         game_over = False
