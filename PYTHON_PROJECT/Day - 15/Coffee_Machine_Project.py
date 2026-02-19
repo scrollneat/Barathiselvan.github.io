@@ -1,7 +1,7 @@
 resource = {
-    "Water": 300,
-    "Milk": 200,
-    "Coffee": 100,
+    "Water": 1000,
+    "Milk": 2000,
+    "Coffee": 1000,
     "Money": 0
 }
 
@@ -76,7 +76,7 @@ while power:
             if user_money < coffee[user_input].get("cost"):
                 print("Sorry that's not enough money. Money refunded.")
             else:
-                resource.update({"Money": coffee[user_input].get("cost")})
+                resource.update({"Money": (resource.get('Money')) + (coffee[user_input].get("cost"))})
                 if user_money > coffee[user_input].get("cost"):
                     print(f"Here is ${round((user_money - coffee[user_input].get("cost")),2)} dollars in change.")
                 for key in (coffee[user_input].get("ingredients")).keys():
