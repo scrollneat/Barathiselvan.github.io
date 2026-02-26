@@ -1,6 +1,6 @@
 import turtle
 import random
-
+s = turtle.Screen()
 # ----------------------Common Functions--------------------------------------------------------------------------
 def draw_shape(sides):
   angle = 360/sides
@@ -78,3 +78,4 @@ def draw_spirograph(size_of_gap):
         vis.setheading(vis.heading() + size_of_gap)
 
 draw_spirograph(5)
+s.exitonclick()
