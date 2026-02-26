@@ -76,6 +76,29 @@ def draw_spirograph(size_of_gap):
         vis.color(random_color())
         vis.circle(100)
         vis.setheading(vis.heading() + size_of_gap)
-
+    vis.clear()
 draw_spirograph(5)
+
+##-------------------Challenge 6 Spot Painting----------------------------------------
+vis.penup()
+vis.goto(-220, -200)
+def left_up():
+	vis.setheading(90)
+	vis.forward(50)
+	vis.setheading(180)
+def right_up():
+	vis.dot(5, random_color())
+	vis.setheading(90)
+	vis.forward(50)
+	vis.setheading(0)
+for i in range(10):
+		for i in range(10):
+			vis.dot(5, random_color())
+			vis.setheading(0)
+			vis.forward(50)
+		left_up()
+		for i in range(10):
+			vis.dot(5, random_color())
+			vis.forward(50)
+		right_up()
 s.exitonclick()
