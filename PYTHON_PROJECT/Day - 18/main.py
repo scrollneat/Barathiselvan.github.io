@@ -91,7 +91,7 @@ def right_up():
 	vis.setheading(90)
 	vis.forward(50)
 	vis.setheading(0)
-for i in range(10):
+for i in range(5):
 		for i in range(10):
 			vis.dot(5, random_color())
 			vis.setheading(0)
