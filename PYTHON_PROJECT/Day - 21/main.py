@@ -23,5 +23,6 @@ while game_over:
 	screen.update()
 	for part in positions:
 		part.forward(20)
-		
+	
+
 screen.exitonclick()
