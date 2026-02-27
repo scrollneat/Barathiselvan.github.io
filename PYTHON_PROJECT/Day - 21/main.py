@@ -14,5 +14,8 @@ for i in range(0,41,20):
 	turtle_1.shape('square')
 	turtle_1.goto(-i, 0)
   
-
+game_over = True
+while game_over:
+	for part in positions:
+		part.forward(20)
 screen.exitonclick()
