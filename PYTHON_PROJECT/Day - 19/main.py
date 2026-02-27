@@ -6,30 +6,28 @@ vis = Turtle()
 screen = Screen()
 
 def move_forward():
-	vis.setheading(0)
-	vis.forward(50)
+	vis.forward(10)
   
 def move_backwards():
-	vis.setheading(180)
-	vis.forward(50)
+	vis.backward(10)
 
-def move_counter_clockwise():
-	vis.setheading(30)
-	vis.circle(100, 40)
+def move_left():
+	new_heading = vis.heading() + 10
+	vis.left(vis.setheading(new_heading))
   
-def move_clockwise():
-	vis.setheading(180)
-	vis.circle(50, 10)
+def move_right():
+	new_heading = vis.heading() - 10
+	vis.setheading(new_heading)
 
 def clean():
   vis.clear()
+  vis.penup()
   vis.home()
+  vis.pendown()
   
 screen.listen()
 screen.onkey(move_forward , 'w')
 screen.onkey(move_backwards , 's')
-screen.onkey(move_counter_clockwise, 'a')
-screen.onkey(move_clockwise, 'd')
+screen.onkey(move_left, 'a')
+screen.onkey(move_right, 'd')
 screen.onkey(clean, 'c')
-
-
