@@ -23,13 +23,13 @@ class Snake:
         self.new_snake_list.append(self.segment)
 
     def extend(self):
-        # self.add_body(self.new_snake_list[-1].position())
-        new_segment = turtle.Turtle()
-        new_segment.penup()
-        new_segment.color('white')
-        new_segment.shape('square')
-        new_segment.goto(self.new_snake_list[-1].position())
-        self.new_snake_list.append(new_segment)
+        self.add_body(self.new_snake_list[-1].position())
+        # new_segment = turtle.Turtle()
+        # new_segment.penup()
+        # new_segment.color('white')
+        # new_segment.shape('square')
+        # new_segment.goto(self.new_snake_list[-1].position())
+        # self.new_snake_list.append(new_segment)
 
     def move(self):
         for pos_num in range(len(self.new_snake_list) -1, 0, -1):
