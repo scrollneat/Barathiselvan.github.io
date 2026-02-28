@@ -36,4 +36,14 @@ while game_on:
     game_on = False
     score.game_over()
 
+  #Detech Collision with the snake tail
+  for i in snake.new_snake_list:
+    if i == snake.head:
+      pass
+    elif snake.head.distance(i) < 10:
+      game_on = False
+      score.game_over()
+
+  
+
 screen.exitonclick()
