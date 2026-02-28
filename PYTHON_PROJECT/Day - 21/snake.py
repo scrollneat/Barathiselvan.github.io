@@ -21,7 +21,7 @@ class Snake:
         self.positions[0].setheading(90)
     
     def down(self):
-        self.positions[0].setheading(-90)
+        self.positions[0].setheading(270)
     
     def right(self):
         self.positions[0].setheading(0)
