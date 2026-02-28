@@ -2,7 +2,6 @@
 
 from turtle import Turtle, Screen
 import time
-
 screen = Screen()
 screen.setup(width = 600, height = 600)
 screen.bgcolor("black")
@@ -21,8 +20,11 @@ game_over = True
 while game_over:
 	time.sleep(0.1)
 	screen.update()
-	for part in positions:
-		part.forward(20)
 	
-
+	for pos_num in range(len(positions) -1, 0, -1):
+		new_x = positions[pos_num - 1].xcor()
+		new_y = positions[pos_num - 1].ycor()
+		positions[pos_num].goto(new_x,new_y)
+	positions[0].forward(20)
+    
 screen.exitonclick()
