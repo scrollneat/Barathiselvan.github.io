@@ -4,7 +4,7 @@ import random
 class Food(Turtle):
     def __init__(self):
         super().__init__()
-        self.shape(0)
+        self.shape("circle")
         self.color("red")
         self.shapesize(0.5,0.5)
         random_x = random.randint(-280, 280)
