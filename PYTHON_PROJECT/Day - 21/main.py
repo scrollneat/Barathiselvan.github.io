@@ -8,6 +8,13 @@ screen.bgcolor("black")
 #screen.title("Snake Game")
 screen.tracer(0)
 snake = Snake()
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.right, "Right")
+screen.onkey(snake.left, "Left")
+
 game_over = True
 while game_over:
 	time.sleep(0.1)

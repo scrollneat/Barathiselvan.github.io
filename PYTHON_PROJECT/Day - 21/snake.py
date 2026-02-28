@@ -16,3 +16,6 @@ class Snake:
             new_y = self.positions[pos_num - 1].ycor()
             self.positions[pos_num].goto(new_x,new_y)
         self.positions[0].forward(20)
+    
+    def up(self):
+        self.positions[0].setheading(90)
