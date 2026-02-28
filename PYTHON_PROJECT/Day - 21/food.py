@@ -6,6 +6,7 @@ class Food(Turtle):
         super().__init__()
         self.shape("circle")
         self.color("red")
+        self.penup()
         self.shapesize(0.5,0.5)
         random_x = random.randint(-280, 280)
         random_y = random.randint(-280, 280)
