@@ -2,6 +2,10 @@ import turtle
 class Snake:
     def __init__(self):
         self.positions = []
+        self.snake_body()
+        self.head = self.positions[0]
+
+    def snake_body(self):
         for i in range(0, 41, 20):
             self.segment = turtle.Turtle()
             self.segment.penup()
@@ -15,16 +19,16 @@ class Snake:
             new_x = self.positions[pos_num - 1].xcor()
             new_y = self.positions[pos_num - 1].ycor()
             self.positions[pos_num].goto(new_x,new_y)
-        self.positions[0].forward(20)
+        self.head.forward(20)
     
     def up(self):
-        self.positions[0].setheading(90)
+        self.head.setheading(90)
     
     def down(self):
-        self.positions[0].setheading(270)
+        self.head.setheading(270)
     
     def right(self):
-        self.positions[0].setheading(0)
+        self.head.setheading(0)
     
     def left(self):
-        self.positions[0].setheading(180)
+        self.head.setheading(180)
