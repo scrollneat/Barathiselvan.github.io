@@ -6,7 +6,7 @@ from food import Food
 from scoreboard import Score
 screen = Screen()
 screen.setup(width = 600, height = 600)
-screen.bgcolor("black")
+screen.bgcolor("green")
 #screen.title("Snake Game")
 screen.tracer(0)
 snake = Snake()
@@ -38,7 +38,7 @@ while game_on:
 
   #Detech Collision with the snake tail
   for i in snake.new_snake_list[1:]:
-    if snake.head.distance(i) < 10:
+    if snake.head.distance(i) < 15:
       game_on = False
       score.game_over()
 

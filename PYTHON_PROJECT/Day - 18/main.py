@@ -5,7 +5,7 @@ s = turtle.Screen()
 def draw_shape(sides):
   angle = 360/sides
   for sides in range (sides):
-    vis.forward(50)
+    vis.forward(80)
     vis.right(angle)
 
 turtle.colormode(255)
@@ -45,6 +45,7 @@ def draw_diff_shapes():
   # vis.setposition(-50,200)
   vis.home()
   vis.pendown()
+  vis.pensize(3)
   # colours = ['light gray', 'royal blue', 'gold','red','pink','cyan','aquamarine','burlywood', 'dark cyan', 'spring green', 'orange red', 'violet', 'dark olive green']
   for i in range (3,12):
     vis.pencolor(random_color())
@@ -71,10 +72,10 @@ def draw_spirograph(size_of_gap):
     vis.penup()
     vis.home()
     vis.pendown()
-    vis.pensize(1)
+    vis.pensize(3)
     for _ in range(int(360 / size_of_gap)):
         vis.color(random_color())
-        vis.circle(100)
+        vis.circle(200)
         vis.setheading(vis.heading() + size_of_gap)
     vis.clear()
 draw_spirograph(5)
