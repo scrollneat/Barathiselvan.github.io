@@ -62,4 +62,5 @@ while game_on:
     if ball.xcor() < -380:
         ball.reset()
         score.score_r_increase()
+        
 screen.exitonclick()
