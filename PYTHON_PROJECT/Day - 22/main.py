@@ -1,5 +1,7 @@
 import turtle
 from paddle import PaddleStick
+from ball import Ball
+import time
 #----------initialize screen-----------------------------------------
 pong_border = turtle.Turtle()
 screen = turtle.Screen()
@@ -27,6 +29,8 @@ for _ in range(2):
 right_paddle = PaddleStick((360,0))
 left_paddle = PaddleStick((-360,0))
 
+ball = Ball()
+
 screen.listen()
 screen.onkey(right_paddle.move_up, "Up")
 screen.onkey(right_paddle.move_down, "Down")
@@ -36,6 +40,10 @@ screen.onkey(left_paddle.move_down, "s")
 
 game_on = True
 while game_on:
+    
+    time.sleep(0.1)
     screen.update()
+    ball.move()
+    
 
 screen.exitonclick()
