@@ -8,7 +8,7 @@ def draw_shape(sides):
     vis.forward(50)
     vis.right(angle)
 
-# turtle.colormode(255)
+turtle.colormode(255)
 def random_color():
   r = random.randint(0,255)
   g = random.randint(0,255)
