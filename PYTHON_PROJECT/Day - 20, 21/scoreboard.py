@@ -6,17 +6,17 @@ class Score(Turtle):
         self.color("white")
         self.penup()
         self.hideturtle()
-        self.goto(0, 270)
+        self.goto(0, 250)
         self.points = 0
         self.update_score()
 
     def update_score(self):
         self.clear()
-        self.write(f"Score: {self.points}", False, align= 'center', font=('Courier', 20, 'normal'))
+        self.write(f"Score: {self.points}", False, align= 'center', font=('Courier', 15, 'normal'))
 
     def game_over(self):
         self.goto(0, 0)
-        self.write("GAME OVER!", False, align= 'center', font=('Courier', 20, 'normal'))
+        self.write("GAME OVER!", False, align= 'center', font=('Courier', 15, 'normal'))
 
     def increase_score(self):
         self.points += 1
