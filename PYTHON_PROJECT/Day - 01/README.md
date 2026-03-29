@@ -17,7 +17,7 @@
 
 ### Links
 
-- Solution URL: [Band Name Generator](https://github.com/scrollneat/Barathiselvan.github.io/new/main/PYTHON_PROJECT/Day - 01)
+- Solution URL: [Band Name Generator](https://github.com/scrollneat/Barathiselvan.github.io/edit/main/PYTHON_PROJECT/Day%20-%2001)
 
 ## Notes
 
