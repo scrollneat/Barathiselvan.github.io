@@ -1,42 +1,12 @@
-Perfect — below is **ONE COMPLETE, CONSOLIDATED `README.md`** that includes **everything I have explained so far**, rewritten cleanly and consistently **only in GitHub README format**.
-
-You can **copy‑paste this entire content directly into `README.md`** without changes.
 
 ***
 
-```markdown
 # Day 25 – Working with CSV Files & Introduction to Pandas 🐼
 
 ## 📌 Overview
 
 This lesson demonstrates how Python can be used to **automate repetitive data work** by reading and analyzing CSV (Comma Separated Values) files.  
 It starts with **basic file handling**, moves to Python’s built‑in `csv` module, and then introduces **Pandas**, the industry‑standard library for working with tabular data efficiently.
-
----
-
-## 💡 Motivation (Why This Lesson Exists)
-
-The lesson begins with a real‑world example from school:
-
-A geography homework required tracking daily weather conditions by watching the news every day and manually recording temperatures. Instead of doing repetitive manual work, the same data could be retrieved directly from the internet at once.
-
-✅ **Core Idea**  
-> If a computer can do repetitive work for you, let it do the work.
-
-This mindset is fundamental to programming and automation—and one of the strongest reasons to learn Python.
-
----
-
-## 🎯 Learning Objectives
-
-By the end of this lesson, you will be able to:
-- Understand what **CSV files** are and where they are used
-- Read CSV files using:
-  - Python file handling
-  - Python’s built‑in `csv` module
-  - The Pandas library
-- Extract and convert column data
-- Understand **why Pandas is preferred** for data analysis
 
 ---
 
@@ -299,37 +269,3 @@ Pandas automatically understands column names from the CSV header.
     *   Improves readability
     *   Is faster and more powerful
 *   Pandas is the **industry standard** for Python data analysis
-
-***
-
-## 🔜 What’s Next
-
-In the next lesson:
-
-*   Deeper exploration of Pandas
-*   Understanding DataFrames and Series
-*   Performing real‑world data analysis tasks
-
-***
-
-## 💬 Author’s Note
-
-This lesson highlights an important programming mindset:
-
-> Don’t do manually what a computer can automate.
-
-Learning the **right tools** is just as important as learning Python syntax.
-
-```
-
----
-
-If you want next:
-✅ **Day‑26 README**  
-✅ Repo structure suggestions  
-✅ `requirements.txt`  
-✅ Interview questions from this lesson  
-✅ Add exercises section  
-
-Just tell me 👍
-```
