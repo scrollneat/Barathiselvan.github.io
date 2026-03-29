@@ -43,3 +43,14 @@ monday = data[data.day == 'Monday']
 print(monday.condition)
 fah_temp= monday.temp[0]
 print((fah_temp*1.8)+32)
+
+
+#create dataframe from scratch
+
+data_dict = {
+    "students": ['Barathi', 'visalini', 'arun'],
+    "scores": [100, 70, 50]
+}
+
+data = pd.DataFrame(data_dict)
+data.to_csv('PYTHON_PROJECT/Day - 25/student_data.csv')
