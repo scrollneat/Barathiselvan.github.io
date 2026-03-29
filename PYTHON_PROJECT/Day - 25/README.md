@@ -269,37 +269,3 @@ Pandas automatically understands column names from the CSV header.
     *   Improves readability
     *   Is faster and more powerful
 *   Pandas is the **industry standard** for Python data analysis
-
-***
-
-## 🔜 What’s Next
-
-In the next lesson:
-
-*   Deeper exploration of Pandas
-*   Understanding DataFrames and Series
-*   Performing real‑world data analysis tasks
-
-***
-
-## 💬 Author’s Note
-
-This lesson highlights an important programming mindset:
-
-> Don’t do manually what a computer can automate.
-
-Learning the **right tools** is just as important as learning Python syntax.
-
-```
-
----
-
-If you want next:
-✅ **Day‑26 README**  
-✅ Repo structure suggestions  
-✅ `requirements.txt`  
-✅ Interview questions from this lesson  
-✅ Add exercises section  
-
-Just tell me 👍
-```
