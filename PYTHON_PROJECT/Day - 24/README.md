@@ -21,7 +21,7 @@
 
 ### Links
 
-- Solution URL: [Mail Merge](https://github.com/Mikerniker/100_Days_of_Python/tree/main/Day24)
+- Solution URL: [Mail Merge](https://github.com/scrollneat/Barathiselvan.github.io/tree/main/PYTHON_PROJECT/Day%20-%2024)
 
 ## My process
 
