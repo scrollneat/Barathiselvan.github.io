@@ -12,15 +12,10 @@ def caesar(original_text, shift_num, function):
                 secret_text += original_text[i]
             else:
                 position = alphabets.index(original_text[i])
-
-                
-
                 shift_position = position + shift_num
                 shift_position %= len(alphabets)
                 secret_text += alphabets[shift_position]
         print(f"Here is your {function}d Text, There is no secret in this world!: {secret_text}")
-        
-
 
 go_continue = True
 while go_continue:
