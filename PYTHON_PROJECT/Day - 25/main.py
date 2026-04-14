@@ -26,6 +26,7 @@ print(data['temp'].max())
 
 #Get Data from Column
 print(data['condition'])
+#You can ignore the ' and [] because pandas will work even if you give data.condition
 print(data.condition)
 # both are same above
 
